@@ -24,3 +24,15 @@ function showFriend() {
         friendsList.appendChild(itemList);
     }
 }
+
+function drawFriend() {
+    if (friends.length <= 0) {
+        alert('Adicione algum nome antes de sortear!');
+    } else {
+        const sortNumber = Math.floor(Math.random() * friends.length);
+        const resultElement = document.getElementById('result');
+        const resultItem = document.createElement('li');
+        resultItem.textContent = friends[sortNumber];
+        resultElement.appendChild(resultItem)
+    }
+}
