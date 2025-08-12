@@ -5,7 +5,7 @@ function addFriend() {
     const friendInput = inputName.value.trim();
 
     if (friendInput === '') {
-        alert('Insira um nome!');
+        alert('Por favor, insira um nome!');
     
     } else {
         friends.push(friendInput);
@@ -32,7 +32,7 @@ function drawFriend() {
         const sortNumber = Math.floor(Math.random() * friends.length);
         const resultElement = document.getElementById('result');
         const resultItem = document.createElement('li');
-        resultItem.textContent = friends[sortNumber];
+        resultItem.textContent = `O amigo sorteado: ${friends[sortNumber]}`;
         resultElement.appendChild(resultItem)
     }
 }
